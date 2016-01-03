@@ -3,13 +3,13 @@
 #
 
 # Name of your site (displayed in the header)
-name: Data Science Lab
+name: Data Journalism Course in Nanjing University
 
 # Short bio or description (displayed in the header)
 description: Data is the new oil.
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://avatars2.githubusercontent.com/u/14106902?v=3&s=200
+avatar: https://avatars2.githubusercontent.com/u/14106800?v=3&s=200
 
 #
 # Flags below are optional
@@ -21,7 +21,7 @@ footer-links:
   email:
   facebook:
   flickr:
-  github: data-science-lab/data-science-lab.github.io
+  github: data-journalism/data-journalism.github.io
   instagram:
   linkedin:
   pinterest:
@@ -41,7 +41,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: http://data-science-lab.github.io
+url: http://data-journalism.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
