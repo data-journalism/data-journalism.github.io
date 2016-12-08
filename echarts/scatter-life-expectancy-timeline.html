@@ -11,6 +11,8 @@
        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
        <script type="text/javascript">
 var dom = document.getElementById("container");
 var myChart = echarts.init(dom);
@@ -20,7 +22,7 @@ app.title = '各国人均寿命与GDP关系演变';
 
 //myChart.showLoading();
 
-$.get('data/life-expectancy.json', function (data) {
+$.get('data/asset/data/life-expectancy.json', function (data) {
     myChart.hideLoading();
 
     var itemStyle = {
@@ -220,7 +222,10 @@ $.get('data/life-expectancy.json', function (data) {
 
     myChart.setOption(option);
 
-});
+});;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
        </script>
    </body>
 </html>
