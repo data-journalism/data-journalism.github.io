@@ -6,31 +6,23 @@
    <body style="height: 100%; margin: 0">
        <div id="container" style="height: 100%"></div>
        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/jquery/jquery.js"></script>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/bootstrap/js/bootstrap.js"></script>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/lodash.js"></script>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/dat.gui.min.js"></script>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/ace/src/ace.js"></script>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/ace/src/ext-language_tools.js"></script>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/javascripts/hm.js"></script></body></html>
-       <!--Begin your visulizaion below-->
- 
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
        <script type="text/javascript">
-        var dom = document.getElementById("container");
-        var myChart = echarts.init(dom);
-        var app = {};
-        option = null;
-        <!--Input your code below-->
-        app.title = '各国人均寿命与GDP关系演变';
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+app.title = '各国人均寿命与GDP关系演变';
 
 //myChart.showLoading();
 
-$.get('./data/life-expectancy.json', function (data) {
+$.get('data/asset/data/life-expectancy.json', function (data) {
     myChart.hideLoading();
 
     var itemStyle = {
@@ -230,14 +222,10 @@ $.get('./data/life-expectancy.json', function (data) {
 
     myChart.setOption(option);
 
-});
-
-        <!--End of Input-->
-
-        if (option && typeof option === "object") {
-            myChart.setOption(option, true);
-        }
+});;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
        </script>
-       
    </body>
 </html>

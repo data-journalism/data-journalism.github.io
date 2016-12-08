@@ -11,16 +11,50 @@
         <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
         <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
         <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 
        <!--Begin your visulizaion below-->
- 
+
        <script type="text/javascript">
         var dom = document.getElementById("container");
         var myChart = echarts.init(dom);
         var app = {};
         option = null;
         <!--Input your code below-->
+        myChart.showLoading();
+        $.get('data/asset/data/energy.json', function (data) {
+            myChart.hideLoading();
 
+            myChart.setOption(option = {
+                title: {
+                    text: 'Sankey Diagram'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    triggerOn: 'mousemove'
+                },
+                series: [
+                    {
+                        type: 'sankey',
+                        layout: 'none',
+                        data: data.nodes,
+                        links: data.links,
+                        itemStyle: {
+                            normal: {
+                                borderWidth: 1,
+                                borderColor: '#aaa'
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                color: 'source',
+                                curveness: 0.5
+                            }
+                        }
+                    }
+                ]
+            });
+        });
 
         <!--End of Input-->
 
@@ -28,6 +62,6 @@
             myChart.setOption(option, true);
         }
        </script>
-       
+
    </body>
 </html>
