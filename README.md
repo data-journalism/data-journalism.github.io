@@ -1,1 +1,2 @@
-# book
+# The Book of Computational Journalism
+
