@@ -1,1 +1,5 @@
 theme: jekyll-theme-minimal
+title: "The Book of Computatonal Journalism"
+description: "寻找人类传播行为的基因"
+logo: "./socrates_jump.gif"
+show_downloads: "false" 
