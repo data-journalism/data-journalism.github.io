@@ -2,8 +2,9 @@
 layout: home
 ---
 
+![](https://raw.githubusercontent.com/chengjun/chengjun/main/tt.gif)
 
-![](socrates_jump.gif)
+
 
 一直在坚持上本科生的《数据新闻》课程。然而对数据新闻的热情逐渐消减，理想却远远没有实现。存在的问题：数据新闻本身的内容混杂。课程内容涉及到新闻选题、数据获取、统计分析、可视化设计四个方面。每一个阶段都是消耗大量的时间，有限的课堂授课无法解决这些问题。因而，这门课应该作为一门高阶的动手类型课程。也就是说当学生已经掌握数据新闻的基础知识之后再来选修这门课。除了将这门课设置为研究生高年级课程之外，是否有可能针对本科生开设这门课程呢？
 
@@ -17,3 +18,5 @@ layout: home
 - 突出授课老师和学生的竞争优势：强调计算（例如数据、统计、机器学习）和编程，弱化可视化叙事。
 
 参与讨论：https://github.com/data-journalism/data-journalism.github.io/discussions/1
+
+![](socrates_jump.gif)
