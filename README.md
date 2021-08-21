@@ -3,7 +3,7 @@
 Make Jelly site have a GitBook look!
 
 
-[![Jekyll Themes](https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg)](https://jekyll-themes.com/jekyll-gitbook/)
+[![Jekyll GitBook Themes](https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg)](https://jekyll-themes.com/jekyll-gitbook/)
 
 ## Why Jekyll with GitBook
 
