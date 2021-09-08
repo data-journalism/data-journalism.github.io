@@ -13,6 +13,13 @@
         {% if page.next %}
             <link rel="next" href="{{site.baseurl}}{{page.next.url}}" />
         {% endif %}
+        
+        {% if page.usemathjax %}
+            <script type="text/javascript" async
+                src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+            </script>
+        {% end if %}
+        
     </head>
     <body>
         <div class="book">
