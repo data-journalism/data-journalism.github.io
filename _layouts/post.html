@@ -14,9 +14,9 @@
             <link rel="next" href="{{site.baseurl}}{{page.next.url}}" />
         {% endif %}
         
-        {% if page.usemathjax %}
+<!--         {% if page.usemathjax %}
             {%- include mathjax.html -%}
-        {% end if %}
+        {% end if %} -->
         
     </head>
     <body>
@@ -53,6 +53,7 @@
         </div>
 
         {%- include footer.html -%}
+        {%- include mathjax.html -%}
 
     </body>
 </html>
