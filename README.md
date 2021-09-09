@@ -20,3 +20,11 @@ for Jekyll to rendering markdown documents to HTML, thus the whole site can be d
 to Github Pages without generating and uploading HTML bundle every time when there are
 changes to the original repo.
 
+## The jekyll-gitbook theme
+
+https://github.com/sighingnow/jekyll-gitbook
+
+To-do list
+- Add the search function https://github.com/sighingnow/jekyll-gitbook/issues/8
+  - https://github.com/jekylltools/jekyll-tipue-search
+
