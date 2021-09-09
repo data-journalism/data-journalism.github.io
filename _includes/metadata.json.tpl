@@ -20,7 +20,7 @@
                 "ignoreSpecialCharacters": false,
                 "maxIndexSize": 1000000
             },
-            "search": {},
+            "search": {"lunr"},
             "sharing": {
                 "all": ["facebook", "google", "twitter", "weibo", "instapaper"],
                 "facebook": true,
