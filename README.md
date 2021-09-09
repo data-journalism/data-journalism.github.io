@@ -27,5 +27,5 @@ https://github.com/sighingnow/jekyll-gitbook
 To-do list
 - Add the search function 
   - https://github.com/jekylltools/jekyll-tipue-search or  https://github.com/sighingnow/jekyll-gitbook/issues/8
-  - https://github.com/christian-fei/Simple-Jekyll-Search/i
+  - https://github.com/christian-fei/Simple-Jekyll-Search
 
