@@ -1,5 +1,5 @@
 ---
-title: 五. 结语
+title: 五、结语
 author: Cheng-Jun Wang
 date: 2021-08-05
 category: Jekyll
