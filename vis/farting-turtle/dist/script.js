@@ -1,0 +1,114 @@
+const stepDuration = 0.5,
+bklegs = '#front-leg-dk, #back-leg-dk',
+frlegs = '#front-leg-lt, #back-leg-lt';
+
+// walking cycle
+gsap.set(bklegs, {
+  transformOrigin: "50% 0%",
+  rotation: 15 });
+
+
+gsap.set(frlegs, {
+  transformOrigin: "50% 0%",
+  rotation: -10 });
+
+
+const walk = () => {
+  gsap.
+  timeline({
+    repeat: -1,
+    defaults: { ease: "circ.inOut", duration: stepDuration } }).
+
+  add('start').
+  to(bklegs, { rotation: -15 }).
+  to(bklegs, { rotation: 15 }).
+  to(frlegs, { rotation: 10 }, 'start').
+  to(frlegs, { rotation: -10 }, `start+=${stepDuration}`);
+};
+
+// bouncing cycle
+gsap.set('svg', {
+  y: -2 });
+
+
+const bounce = () => {
+  gsap.
+  timeline({
+    repeat: -1,
+    defaults: { duration: 0.25 } }).
+
+  add('bouncest').
+  to('svg', { y: 2 }).
+  to('svg', { y: -2 }, 'bouncest+=0.25');
+};
+
+// blink
+gsap.set('#eyer, #eyel', {
+  transformOrigin: "50% 50%" });
+
+
+const blink = () => {
+  gsap.
+  timeline({
+    repeat: -1,
+    repeatDelay: 1.5,
+    defaults: { ease: "circ", duration: 0.1 } }).
+
+  add('blink').
+  to('#eyer, #eyel', { scaleY: 0 }).
+  to('#eyer, #eyel', { scaleY: 1 });
+};
+
+//farts
+gsap.registerPlugin(MotionPathPlugin);
+const bubcircle = document.querySelectorAll('#bubbles circle');
+
+gsap.set(`#bubbles`, {
+  x: -230,
+  y: -200 });
+
+
+const bubbles = () => {
+  bubcircle.forEach((el, i) => {
+    gsap.to(el, {
+      scale: 0.4,
+      opacity: 0,
+      repeat: -1,
+      ease: "circ",
+      duration: 6,
+      stagger: 0.05,
+      motionPath: {
+        path: `#bstring${i + 1}` } });
+
+
+  });
+};
+
+// fartreaction
+const fartDur = 0.5;
+
+const fartreaction = () => {
+  gsap.
+  timeline({
+    repeat: -1,
+    repeatDelay: 5,
+    defaults: { ease: 'back', duration: fartDur } }).
+
+  add('fart').
+  to('.cheeks circle', { opacity: 0.5 }, 'fart').
+  to('.cheeks circle', { opacity: 0 }, `fart+=${fartDur}`).
+  to('#head', { x: -20 }, 'fart').
+  to('#head', { x: 0 }, `fart+=${fartDur}`).
+  to('#mouth', { opacity: 0, duration: 0.01 }, 'fart').
+  to('#mouth2', { opacity: 0.5, duration: 0.01 }, 'fart').
+  to('#mouth', { opacity: 0.5, duration: 0.01 }, `fart+=${fartDur}`).
+  to('#mouth2', { opacity: 0, duration: 0.01 }, `fart+=${fartDur}`);
+};
+
+window.onload = () => {
+  walk();
+  bounce();
+  blink();
+  bubbles();
+  fartreaction();
+};

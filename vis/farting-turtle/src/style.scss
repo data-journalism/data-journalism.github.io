@@ -1,0 +1,53 @@
+body {
+  background: #357e84;
+}
+
+svg {
+  width: 80vw;
+  height: 80vh;
+  margin: 10vh 10vw;
+}
+
+#bstrings {
+  opacity: 0;
+}
+
+.cheeks circle {
+  fill: #e05e5c;
+  opacity: 0;
+}
+
+#mouth2 {
+  opacity: 0;
+}
+
+.cls-4 {
+  fill: #45720a;
+}
+.cls-5 {
+  fill: #a6af37;
+}
+.cls-6 {
+  fill: #578e17;
+}
+.cls-7 {
+  fill: #fff;
+}
+.cls-18 {
+  fill: none;
+  stroke-miterlimit: 10;
+}
+.cls-11 {
+  fill: #912b0c;
+}
+.cls-18 {
+  stroke: #66a9b2;
+}
+
+.gsap-3-logo {
+  width: 20vw;
+  max-width: 150px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
